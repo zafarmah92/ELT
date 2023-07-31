@@ -1,0 +1,11 @@
+## Refer to Using dbt with Dagster, part one for info about this file:
+## https://docs.dagster.io/integrations/dbt/using-dbt-with-dagster/part-one
+
+version: 2
+
+sources:
+  - name: dbt_project
+    tables:
+      - name: raw_professional_event_log
+      - name: raw_professional_synthetic_data
+      - name: raw_proposal_synthetic_data

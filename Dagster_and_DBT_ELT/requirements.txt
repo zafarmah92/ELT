@@ -1,0 +1,10 @@
+dagit
+dagster-postgres
+dagster
+dagster-dbt
+sqlalchemy
+psycopg2-binary
+pandas
+dbt-core
+dbt-postgres
+scipy

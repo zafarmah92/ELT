@@ -1,0 +1,13 @@
+mds_dbt:
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      host: host.docker.internal
+      port: 5432
+      user: postgres
+      pass: secret
+      dbname: postgres
+      schema: dbt_project
+      threads: 2
+      keepalives_idle: 0

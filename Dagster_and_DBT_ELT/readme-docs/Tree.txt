@@ -1,0 +1,49 @@
+.
+├── dbt_project
+│  ├── analyses
+│  ├── config
+│  │  └── profiles.yml
+│  ├── dbt_project.yml
+│  ├── macros
+│  ├── models
+│  │  ├── dim_models
+│  │  │  ├── active_professionals.sql
+│  │  │  ├── active_professionals_simple_model.sql
+│  │  │  ├── dim_professionals.sql
+│  │  │  ├── dim_proposals.sql
+│  │  │  ├── fact_event_proposal.sql
+│  │  │  └── schema.yaml
+│  │  ├── schema.yml
+│  │  ├── sources.yml
+│  │  └── staging
+│  │     ├── stg_event_log.sql
+│  │     ├── stg_professionals.sql
+│  │     └── stg_proposals.sql
+│  ├── README.md
+│  └── tests
+├── docker
+│  ├── dagster.yaml
+│  ├── Dockerfile
+│  └── metabase.Dockerfile
+├── docker-compose.yml
+├── Makefile
+├── ownerjobs
+│  ├── __init__.py
+│  ├── __main__.py
+│  ├── assets
+│  │  ├── __init__.py
+│  │  └── assets_read.py
+│  ├── io
+│  │  ├── db_io_manager.py
+│  │  └── pg_db_io_manager.py
+│  ├── raw_data
+│  │  └── event_log.csv
+│  ├── resources
+│  │  └── db.py
+│  └── utils
+│     └── constants.py
+├── README.md
+├── requirements-dev.txt
+├── requirements.txt
+├── Tree.txt
+└── workspace.yaml

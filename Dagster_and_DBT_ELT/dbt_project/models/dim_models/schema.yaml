@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: dim_professionals
+    description: Dimension table for professionals
+    columns:
+      - name: n_professional_id
+        description: The unique identifier for the professional
+      - name: p_first_Name
+        description: The first name of the professional
+      - name: p_last_name
+        description: The last name of the professional
+      - name: p_email
+        description: The email address of the professional
+    meta:
+      primary_key:
+        - n_professional_id
+
+  - name: dim_proposals
+    description: Dimension table for proposals
+    columns:
+      - name: n_id
+        description: The unique identifier for the proposal
+      - name: n_house_owner_id
+        description: The ID of the house owner associated with the proposal
+      - name: n_professional_id
+        description: The ID of the professional associated with the proposal
+      - name: n_message_text
+        description: The text of the proposal message
+      - name: n_proposal_amount
+        description: The amount proposed in the proposal
+    meta:
+      primary_key:
+        - n_id
+      
+
+  - name: fact_event_proposal
+    description: Fact table for event and proposal data
+    columns:
+      - name: n_event_id
+        description: The unique identifier for the event
+      - name: n_event_type
+        description: The type of event
+      - name: n_professional_id
+        description: The ID of the professional associated with the event
+      - name: n_created_at
+        description: The timestamp when the event occurred
+      - name: n_meta_data
+        description: Additional metadata for the event
+      - name: n_payment_to_instapro
+        description: Payment information related to the event
+      - name: n_proposal_id
+        description: The ID of the proposal associated with the event
+      - name: n_house_owner_id
+        description: The ID of the house owner associated with the proposal
+      - name: n_message_text
+        description: The text of the proposal message
+      - name: n_proposal_amount
+        description: The amount proposed in the proposal
+      - name: p_first_Name
+        description: The first name of the professional
+      - name: p_last_name
+        description: The last name of the professional
+      - name: p_email
+        description: The email address of the professional
+    meta:
+      primary_key:
+        - n_event_id
+        - n_proposal_id
+      foreign_key:
+        - n_professional_id 
+      foreign_key:
+        - n_house_owner_id
+        - n_professional_id 

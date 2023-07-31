@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_raw_professional_event_log
+    description: event log of professional  
+    columns: 
+        - name: n_event_id 
+          description: Event ID of professional. 
+        - name: n_evet_type
+          description: Type of event ID.
+        - name: n_professional_id_anonymized
+          description: Anonymized ID of professionals. 
+        - name: n_created_at 
+          description: Created date of an event.
+        - name: meta_data
+          description: meta data of an event. 
+        - name: payment_to_instapro
+          description: payment made for proposal.
+    meta:
+      primary_key:
+        - n_event_id
+        - n_professional_id_anonymized
+
+
+  - name: stg_proposal_data
+    description: Proposal synthetic data 
+
+
+  - name: stg_professional_data
+    description: Professional synthetic data 
